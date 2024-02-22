@@ -167,6 +167,71 @@ acharya-aiml-c
 machine learning 
 linear regression
 
+jupyter
+
+
+import pandas as pd
+import matplotlib.pyplot as plt
+from sklearn import linear_model
+df = pd.read_csv("homeprices.csv")
+df
+
+plt.title("Home prices")
+plt.xlabel("Area")
+plt.ylabel("price")
+plt.scatter(df.area,df.price)
+y=df.price
+y
+x=df.drop('price',axis="columns")
+x
+reg= linear_model.LinearRegression()
+reg.fit(x,y)
+reg.score(x,y)
+reg.predict([[3000]])
+
+plt.title("Home prices")
+plt.xlabel("Area")
+plt.ylabel("price")
+plt.scatter(df.area,df.price,color="red")
+plt.plot(x,reg.predict(x))
+
+area_df =pd.read_csv("areas.csv")
+area_df
+pred_price =reg.predict(area_df)
+pred_price
+area_df["price"]=pred_price
+area_df
+area_df.to_csv("predict22022024.csv")
+
+
+linearregression_multivariate
+
+
+import pandas as pd
+import numpy as np
+from sklearn import  linear_model
+
+df = pd.read_csv('homeprices.csv')
+df
+
+df.bedrooms.median()
+
+df.bedrooms = df.bedrooms.fillna(df.bedrooms.median())
+df
+
+reg = linear_model.LinearRegression()
+reg.fit(df.drop('price',axis='columns'),df.price)
+reg.predict([[3000, 3, 40]])
+
+https://www.kaggle.com/code/umutsefkansak/regression-models-on-car-price
+
+https://www.kaggle.com/code/ingusterbets/nih-chest-x-rays-analysis
+
+
+
+
+kaggle
+
 
 
 

@@ -130,6 +130,12 @@ print(df.sample(frac=.2))
 Matplotlib
 Machine Learning algorithms
 Regression and classification
+topeconomies={
+    "country":["USA","CHINA","GERMANY","JAPAN","INDIA"],
+    "GDP":[27,18,4.7,4.2,4.1],
+    "RANK":[1,2,3,4,5]
+}
+df= pd.DataFrame(topeconomies)
 
 import matplotlib.pyplot as plt
 print("line chart")
@@ -151,7 +157,15 @@ plt.ylabel("GDP")
 plt.bar(df.country,df.GDP)
 plt.show()
 
+www.kaushalya.tech
 
+click git link
+repositories
+first repository
+acharya-aiml-c
+
+machine learning 
+linear regression
 
 
 
